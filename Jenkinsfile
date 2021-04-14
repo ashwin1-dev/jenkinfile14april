@@ -3,26 +3,26 @@ pipeline {
     
     tools {
           maven "jenkin-maven"
-    }
+         }
     
     
     stages {
-        stage('SCM') {
+         stage('SCM') {
             steps {
                 git https://github.com/ashwin1-dev/31-march-maven2.git
                  }
-         }
+           }
         
         stage('Build') {
             steps {
-                sh "build clean package"
-            }
-        }
+                sh "mvn clean package"
+             }
+         }
         
         stage('Deploy') {
-            steps {
+             steps {
                  sh "sudo cp                /usr/share/tomcat/webapps/"
                  }
-        }
-    }
+            }
+      }
 }
