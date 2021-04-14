@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-          maven "jenkin-maven"
+          maven "jenkins-maven"
          }
     
     
