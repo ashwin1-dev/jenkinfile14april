@@ -21,7 +21,7 @@ pipeline {
         
         stage('Deploy') {
              steps {
-                 sh "sudo cp                /usr/share/tomcat/webapps/"
+                 sh "sudo cp  /var/lib/jenkins/workspace/pp-last/target/vlc2.war   /usr/share/tomcat/webapps/"
                  }
             }
       }
