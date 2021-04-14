@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
-                https://github.com/ashwin1-dev/31-march-maven2.git
+                git https://github.com/ashwin1-dev/31-march-maven2.git
                  }
          }
         
