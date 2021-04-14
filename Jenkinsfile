@@ -15,7 +15,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                build  vlc2
+                sh "mvn  clean package"
              }
          }
         
