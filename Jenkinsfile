@@ -9,7 +9,7 @@ pipeline {
     stages {
          stage('SCM') {
             steps {
-                git 'https://github.com/ashwin1-dev/jenkinfile14april.git'
+                git 'https://github.com/ashwin1-dev/31-march-maven2.git'
                  }
            }
         
