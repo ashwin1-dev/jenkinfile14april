@@ -1,13 +1,28 @@
 pipeline {
     agent any
-
+    
+    tools {
+          maven "jenkin-maven"
+    }
+    
+    
     stages {
+        stage('SCM') {
+            steps {
+                https://github.com/ashwin1-dev/31-march-maven2.git
+                 }
+         }
+        
         stage('Build') {
             steps {
-                sh 'sudo yum install httpd -y'
-                sh 'sudo systemctl start httpd'
-                sh 'sudo git clone https://github.com/ashwin1-dev/jenkin3.git  /var/www/html '
+                sh "build clean package"
             }
+        }
+        
+        stage('Deploy') {
+            steps {
+                 sh "sudo cp                /usr/share/tomcat/webapps/"
+                 }
         }
     }
 }
